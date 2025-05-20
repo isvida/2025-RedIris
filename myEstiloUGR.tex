@@ -1,0 +1,79 @@
+\usetheme{Antibes}
+
+\definecolor{rojoUGR}{HTML}{d53044}
+\definecolor{darkgray}{HTML}{737572}
+\definecolor{text}{HTML}{99a6ad}
+\definecolor{lightgray}{gray}{0.95}
+
+
+\definecolor{lavendergray}{rgb}{0.77, 0.76, 0.82}
+\colorlet{beamer@blendedblue}{rojoUGR}
+
+\setbeamercolor{normal text}{fg=darkgray}
+\setbeamercolor{block title}{bg=darkgray}
+\setbeamercolor{block body}{bg=white}
+%\setbeamercolor{structure}{fg=rojoUGR}
+%\colorlet{beamer@blendedblue}{rojoUGR}
+
+% This is for using different fonts
+\usepackage[sfdefault]{roboto}  %% Option 'sfdefault' only if the base font of the document is to be sans serif
+\usepackage[T1]{fontenc}
+
+%Color de los bulltets
+\setbeamertemplate{itemize item}[square]
+\setbeamercolor{itemize item}{fg=darkgray}
+\setbeamertemplate{itemize subitem}[circle]
+\setbeamercolor{itemize subitem}{fg=darkgray}
+\setbeamercolor{itemize subsubitem}{fg=darkgray}
+\setbeamertemplate{itemize subsubitem}[square]
+\setbeamercolor{enumerate item}{fg=darkgray}
+\setbeamertemplate{enumerate item}[square]
+
+% Para añadir subtitulos a las diapositivas
+\setbeamercolor{framesubtitle}{fg=darkgray}
+\setbeamerfont{framesubtitle}{size=\small,series=\itshape}
+
+%remove navigation symbols
+\setbeamertemplate{navigation symbols}{}
+
+%remove headline tree
+\setbeamertemplate{headline}{}
+
+%% Modificar el pie de página para que se asemeje al de la UGR
+\setbeamertemplate{footline}[text line]{LaTeX Avanzado}
+\setbeamertemplate{footline}{%
+                \hspace{0.5cm}%
+                \vspace{0.2cm}%
+                \includegraphics[height=0.6cm]{imagenes/nuevoPollo2.png}%
+                \hfill
+                \rule[0.3cm]{\dimexpr\linewidth-2cm\relax}{0.4pt}%
+                \hfill
+                \usebeamercolor[fg]{page number in head/foot}%
+                \usebeamerfont{page number in head/foot}%
+                \raisebox{0.25cm}{%
+                    \tikz[baseline=(char.base)]{
+                        \node[shape=circle, fill=rojoUGR, text=white, inner sep=2pt] (char) {\insertframenumber};
+                    }
+                }\,\kern2em%
+}
+
+%% Modificar el título para que se asemeje al de la UGR
+\setbeamercolor{frametitle}{fg=rojoUGR}
+\setbeamertemplate{frametitle}{%
+    \vspace{0.2cm}%
+    \begin{tikzpicture}[baseline=(title.base)]
+        % Línea vertical
+        \node[anchor=base west] (line) at (0,1cm) {\tikz[baseline] \draw[darkgray, line width=3pt] (0,-0.08cm) -- (0,-1.0cm);};
+        % Título al lado de la línea
+        \node[anchor=base west] (title) at ([xshift=0.0cm, yshift=0.05cm]line.east) {%
+            \usebeamercolor[fg]{frametitle}%
+            \usebeamerfont{frametitle}\insertframetitle%
+        };
+        % Subtítulo debajo del título, alineado con la línea
+        \node[anchor=north west] (subtitle) at ([yshift=0.2cm]title.south west) {%
+            \usebeamercolor[fg]{framesubtitle}%
+            \usebeamerfont{framesubtitle}\insertframesubtitle%
+        };
+    \end{tikzpicture}%
+    \vspace{0.2cm}%
+}

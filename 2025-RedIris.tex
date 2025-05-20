@@ -1,0 +1,239 @@
+\documentclass[aspectratio=169]{beamer}
+\usepackage{graphicx} % Required for inserting images
+
+\usepackage{tikz}
+
+\usetheme{Madrid}
+
+\include{myEstiloUGR}
+
+\usepackage[spanish]{babel}
+
+\usepackage{lmodern}
+
+%Para poder usar las tildes. Hay que guardar el documento en uft-8
+\usepackage[utf8]{inputenc}
+
+\usepackage{amsmath}
+
+\usepackage{mathtools}
+
+%Para usar columnas
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{listings}
+
+\usepackage{amsmath}
+
+
+\usepackage{graphicx} % Required for inserting images
+
+\usepackage{tikz}
+
+\include{myEstiloUGR}
+% \usetheme{Antibes}
+% \usecolortheme{beaver}
+
+%Para poder usar las tildes. Hay que guardar el documento en uft-8
+\usepackage[utf8]{inputenc}
+
+%Para incluir código fuente
+\usepackage{lstautogobble}
+\usepackage{listings}
+\lstset{
+    language=[LaTeX]TeX,
+    texcsstyle=*\bf\color{blue},
+     basicstyle=\tiny\ttfamily, frame=single, columns=fullflexible,
+     breaklines=false, showtabs=false, upquote=true, showstringspaces=false,
+      keywordstyle=\color{blue}, commentstyle=\color{red}, stringstyle=red,
+      numberstyle=\tiny\color{mygray, autogobble=true}
+}
+
+\title{LLM COMO SERVICIO}
+
+
+
+\subtitle{\textit{MiIA UGR (Mi Inteligencia Artificial)}}
+\author{Isaac Vidal Daza}
+\institute{Apoyo a la Docencia \newline Centro de Servicios de Informática y Redes de Comunicaciones \newline Universidad de Granada}
+\date{22-05-2025}
+
+% logo of my university
+
+
+\titlegraphic{
+   \includegraphics[width=4cm,align=c]{imagenes/logoCSIRCDef.png}
+}
+
+
+\setbeamertemplate{footline}{%
+        \hspace{0.5cm}%
+        \vspace{0.2cm}%
+        \includegraphics[align=r, height=0.8cm]{imagenes/nuevoPollo2.png}%
+        \hfill%
+        \textit{JJTT RedIRIS 2025}
+        \usebeamercolor[fg]{page number in head/foot}%
+        \usebeamerfont{page number in head/foot}%
+        \insertframenumber\,/\,\inserttotalframenumber\kern1em%
+ }
+
+% Listing
+%Para incluir código fuente
+\usepackage{listings}
+\lstset{ 
+     basicstyle=\scriptsize\ttfamily, frame=single, columns=fullflexible,
+     breaklines=true, showtabs=false, upquote=true, showstringspaces=false,
+      keywordstyle=\color{blue}, numberstyle=\tiny\color{darkgray}
+}
+
+\begin{document}
+
+\begin{frame}
+    %\titlepage
+    \maketitle
+\end{frame}
+%
+
+%
+%Sección Introducción
+
+\begin{frame}{Inteligencia Artificial (según los "Mass Media")}
+
+    \begin{center}
+        \includegraphics[width=9cm]{imagenes/final_trick.png}
+    \end{center}
+
+\end{frame}
+
+\begin{frame}{Modelos de Lenguaje}
+
+    \begin{block}{Lámpara Mágica}
+        \begin{center}
+            \includegraphics[width=10cm]{imagenes/llm-blacbox.png}
+        \end{center}
+    \end{block}
+
+\end{frame}
+
+
+\begin{frame}{Core MiIA}
+    \framesubtitle{Componentes del Servicio}
+
+    \begin{center}
+        \includegraphics[height=6cm]{imagenes/MiIA_core.pdf}
+    \end{center}
+
+
+\end{frame}
+
+\begin{frame}{LiteLLM: proxy LLM}
+    \framesubtitle{Definición de API keys: \textit{Virtual Keys}}
+
+    \begin{center}
+        \includegraphics[height=6cm]{imagenes/LiteLLM_vkeys.png}
+    \end{center}
+
+\end{frame}
+
+\begin{frame}{LiteLLM: proxy LLM}
+    \framesubtitle{Definición de modelos y control de accesos.}
+
+    \begin{center}
+        \includegraphics[height=6cm]{imagenes/LiteLLM_models.png}
+    \end{center}
+
+\end{frame}
+
+\begin{frame}{LiteLLM: proxy LLM}
+    \framesubtitle{Escalado del servicio LLM}
+
+    \begin{center}
+        \includegraphics[height=6cm]{imagenes/LiteLLM_scaling.pdf}
+    \end{center}
+
+\end{frame}
+
+\begin{frame}{Core MiIA}
+    \framesubtitle{Componentes del Servicio}
+
+    \begin{center}
+        \includegraphics[height=6cm]{imagenes/MiIA_core.pdf}
+    \end{center}
+
+\end{frame}
+
+\begin{frame}{vLLM}
+    \framesubtitle{Servidor de Inferencia}
+
+    \begin{center}
+        \includegraphics[height=4cm]{imagenes/vllm_arch.png}
+    \end{center}
+
+\end{frame}
+
+\begin{frame}{Servicios Ofrecidos con MiIA Core}
+    \framesubtitle{MiIA Chat (\textbf{Open WebUI})}
+
+    \begin{center}
+        \includegraphics[height=6cm]{imagenes/MiIA_chat.png}
+    \end{center}
+
+\end{frame}
+
+\begin{frame}{Servicios Ofrecidos con MiIA Core}
+    \framesubtitle{MiIA Chat (\textbf{Open WebUI}): Arquitectura}
+
+    \begin{center}
+        \includegraphics[height=6cm]{imagenes/MiIA_chat_arch.pdf}
+    \end{center}
+
+\end{frame}
+
+\begin{frame}{Diseño MiIA}
+
+        \begin{center}
+            \includegraphics[width=14cm]{imagenes/MiIA_completo.pdf}
+        \end{center}
+
+
+\end{frame}
+
+
+\begin{frame}{Servicio de Apoyo a la Docencia}
+    \begin{block}{\centering Personal}
+        \begin{columns}
+            \begin{column}{0.5\linewidth}
+
+                \begin{itemize}
+                    \item Francisco Romera Juárez. (Head)
+                    \item Fernando López Álvarez.
+                    \item Antonio Cano Ruano.
+                \end{itemize}
+
+            \end{column}
+            \begin{column}{0.5\linewidth}
+                \begin{itemize}
+                    \item Rodrigo González Gálvez.
+                    \item Domingo Baca Ruíz.
+                    \item Leire Melchor López.
+                    \item Isaac Vidal Daza.
+                \end{itemize}
+            \end{column}
+        \end{columns}
+    \end{block}
+\end{frame}
+
+
+\begin{frame}{Preguntas}
+    \begin{block}{Presentación y Código}
+    \begin{center}
+        \href{https://github.com/isvida/2024-RedIris}{https://github.com/isvida/2024-RedIris}
+    \end{center}
+\end{block}
+\end{frame}
+
+
+
+
+\end{document}
