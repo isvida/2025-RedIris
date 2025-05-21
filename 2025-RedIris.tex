@@ -64,6 +64,7 @@
 
 \titlegraphic{
    \includegraphics[width=4cm,align=c]{imagenes/logoCSIRCDef.png}
+    \includegraphics[height=0.6cm, align=c]{imagenes/redIris.png} 
 }
 
 
@@ -72,7 +73,8 @@
         \vspace{0.2cm}%
         \includegraphics[align=r, height=0.8cm]{imagenes/nuevoPollo2.png}%
         \hfill%
-        \textit{JJTT RedIRIS 2025}
+        \includegraphics[height=1cm, align=c]{imagenes/redIris.png}
+        %\textit{JJTT RedIRIS 2025}
         \usebeamercolor[fg]{page number in head/foot}%
         \usebeamerfont{page number in head/foot}%
         \insertframenumber\,/\,\inserttotalframenumber\kern1em%
@@ -190,13 +192,48 @@
 
 \end{frame}
 
-\begin{frame}{Diseño MiIA}
+\begin{frame}{Servicios Ofrecidos con MiIA Core}
+    \framesubtitle{\textbf{ThunderAI}: Extensión de Thunderbird para correo electrónico}
 
+    \begin{center}
+        \includegraphics[height=6cm]{imagenes/thunderAI.png}
+    \end{center}
+
+\end{frame}
+
+
+\begin{frame}{Servicios Ofrecidos con MiIA Core}
+    \framesubtitle{\textbf{Continue}: Extensión de Visual Studio Code para desarrollo asistido por IA}
+
+    \begin{center}
+        \includegraphics[height=6cm]{imagenes/vscode_continue3.png}
+    \end{center}
+
+\end{frame}
+
+\begin{frame}{Atención de los Transformadores: un enfoque matemático}
+    \begin{center}
+        La atención de los transformadores se basa en la idea de que cada token de entrada es un vector de dimensión $d$.
+        El objetivo es transformar estos vectores en una salida de dimensión $D$ que representa la probabilidad de que el token de salida sea un determinado símbolo.
+        La atención se logra mediante una capa de transposición que permite a los tokens de entrada interactuar entre sí, y una capa de dot producto que combina estos tokens para producir la salida.
+        En resumen, la atención de los transformadores se puede resumir en la siguiente ecuación:
+        \[
+        \text{Output} = \sum_{i=1}^{L} \text{Attention}(i) \times \text{Output}_i
+        \]
+        donde $\text{Attention}(i)$ es la atención dada por el token $i$ y $\text{Output}_i$ es el output del token $i$.
+    \end{center}
+\end{frame}
+
+\begin{frame}{Reconocimiento (\textit{Parseo}) de Documentos}
+        \begin{center}
+            \includegraphics[width=12cm]{imagenes/epf.png}
+        \end{center}
+\end{frame}
+
+\begin{frame}
         \begin{center}
             \includegraphics[width=14cm]{imagenes/MiIA_completo.pdf}
         \end{center}
-
-
 \end{frame}
 
 
@@ -228,7 +265,7 @@
 \begin{frame}{Preguntas}
     \begin{block}{Presentación y Código}
     \begin{center}
-        \href{https://github.com/isvida/2024-RedIris}{https://github.com/isvida/2024-RedIris}
+        \href{https://github.com/isvida/2025-RedIris}{https://github.com/isvida/2025-RedIris}
     \end{center}
 \end{block}
 \end{frame}
